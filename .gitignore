@@ -1,0 +1,24 @@
+# Dependencias de Node.js
+node_modules
+
+# Archivos de respaldo (ejemplo: filename~)
+*~
+
+# Archivos temporales generados durante la compilación de TypeScript
+
+*.js.map
+*.d.ts
+
+# Caché de Visual Studio Code
+.vscode/
+
+# Archivos de registro
+npm-debug.log*
+
+# Carpetas generadas por linters y pruebas
+coverage/
+
+# Carpetas generadas por herramientas de construcción
+build/
+out/
+.env
