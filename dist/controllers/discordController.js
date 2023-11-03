@@ -4,7 +4,7 @@ exports.sendMessage = void 0;
 const discord_js_1 = require("discord.js");
 const connection_1 = require("../bot/connection");
 require('dotenv').config();
-const sendMessage = async () => {
+const sendMessage = async (count) => {
     if ((0, connection_1.isConnected)() === false) {
         await (0, connection_1.connectBot)();
     }
@@ -14,7 +14,7 @@ const sendMessage = async () => {
     const channelId = process.env.CHANNEL_ID ?? '';
     const channel = guild?.channels.cache.get(channelId);
     if (channel instanceof discord_js_1.TextChannel) {
-        channel.send('¡Hola, mundo!');
+        channel.send(`Hay ${count} conexiones activas`);
     }
     else {
         console.error('El canal no es un TextChannel.');
