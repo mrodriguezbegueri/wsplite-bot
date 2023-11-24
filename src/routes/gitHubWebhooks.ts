@@ -15,7 +15,7 @@ gitHubWebhooks.post('/git/pullRequest', (async (req: Request, res: Response) => 
             return
         }
 
-        const message = `Nuevo PR en el proyecto ${repository.name} \n PR: ${pull_request.html_url}`
+        const message = `Nuevo PR en el proyecto ${repository.name} \n PR: ${pull_request.title} \n URL: ${pull_request.html_url}`
         await sendMessage(message)
 
         res.json('OK')
