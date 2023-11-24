@@ -6,8 +6,8 @@
       "command": "npm install"
     },
     {
-      "command": "npm run build",
-      "name": "d"
+      "name": "d",
+      "command": "npm run build"
     }
   ],
 
@@ -15,18 +15,19 @@
   "tasks": {
     "test": {
       "name": "test",
-      "command": "npm run test",
-      "runAtStart": false
+      "command": "npm run test"
     },
     "start": {
       "name": "start",
       "command": "npm run start",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
     },
     "build": {
       "name": "build",
-      "command": "npm run build",
-      "runAtStart": false
+      "command": "npm run build"
     }
   }
 }
