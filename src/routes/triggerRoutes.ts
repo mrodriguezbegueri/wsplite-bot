@@ -5,7 +5,10 @@ const triggerRoutes = Router()
 
 triggerRoutes.post('/newAuth', (async (req: Request, res: Response) => {
     const count = req.body.count
-    await sendMessage(count)
+
+    const message = `Hay ${count} conexiones activas`
+
+    await sendMessage(message)
     res.json('OK')
   }) as RequestHandler)
 
